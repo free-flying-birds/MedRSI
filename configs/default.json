@@ -1,0 +1,27 @@
+{
+  "backbones": ["Qwen3.8-Flash-Next", "DeepSeek-V4.1-Flash"],
+  "same_backbone_for_all_rsi_roles": true,
+  "decoding": {
+    "temperature": 1.0,
+    "top_p": 1.0,
+    "top_k": null,
+    "max_output_tokens": 16384,
+    "repetition_penalty": 1.0,
+    "frequency_penalty": 0.0,
+    "presence_penalty": 0.0,
+    "beam_search": false
+  },
+  "iterations_per_combination": 3,
+  "validation_cases_per_combination": 45,
+  "validation_batch_size": 15,
+  "judge": {"delta": 0.01, "epsilon": 0.0, "m_min": 5},
+  "evaluation_repetitions": 5,
+  "freeze_templates_before_test": true,
+  "retrieval": {
+    "embedding_model": "jina-embeddings-v4",
+    "index": "Qdrant",
+    "case_report_years": [2000, 2026],
+    "k_init": null,
+    "k_practice": null
+  }
+}
